@@ -1,8 +1,9 @@
-fact = [1] * (2 * 10**6)
-fact_inv = [1] * (2 * 10**6)
+maxN = 2*10**6
+fact = [1] * maxN
+fact_inv = [1] * maxN
 mod = 998244353
 
-for i in range(1, 2 * 10**6):
+for i in range(1, maxN):
     fact[i] = fact[i-1] * i % mod
     fact_inv[i] = pow(fact[i], mod - 2, mod)
 
